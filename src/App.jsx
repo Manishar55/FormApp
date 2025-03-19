@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   const [formData, setFormData]=useState({
-    firstName:"", lastName:"", email:"", country:"India"
+    firstName:"", lastName:"", email:"", country:"India", streetAddress:"", city:"", state:"", postalCode:"", 
   });
 
   function changeHandler(event){
@@ -19,9 +19,9 @@ function App() {
 
       <form className='form'>
 
-        <label htmlFor='firstName'>First Name</label>
+        <label className='fr' htmlFor='firstName'>First Name</label>
         <br></br>
-        <input
+        <input className='fr'
         type='text'
         name='firstName'
         id='firstName'
@@ -32,9 +32,10 @@ function App() {
         <br></br>
         <br></br>
 
-        <label htmlFor='LastName'>Last Name</label>
+        <label className='fr' htmlFor='LastName'>Last Name</label>
         <br></br>
-        <input
+        <input 
+        className='fr'
         type='text'
         name='lastName'
         id='lastName'
@@ -45,9 +46,10 @@ function App() {
         <br></br>
         <br></br>
 
-        <label htmlFor='email'>Email</label>
+        <label className='fr' htmlFor='email'>Email</label>
         <br></br>
         <input
+        className='fr'
         type='text'
         name='email'
         id='email'
@@ -57,14 +59,70 @@ function App() {
         />
         <br></br><br></br>
 
-        <label htmlFor='country'>Country</label>
-        <select id='country' value={formData.country}>
+        <label className='fr' htmlFor='country'>Country</label>
+        <br></br>
+        <select className='fr' id='country' value={formData.country}>
           <option>India</option>
           <option>Japan</option>
           <option>Korea</option>
           <option>China</option>
           <option>US</option>
         </select>
+
+        <br></br>
+        <br></br>
+
+        <label className='fr' htmlFor='streetAddress'>street Address</label>
+        <br></br>
+        <input
+        className='fr'
+        type='text'
+        name='streetAddress'
+        id='streetAddress'
+        placeholder='streetAddress'
+        value={formData.streetAddress}
+        onChange={changeHandler}
+        />
+        <br></br><br></br>
+
+        <label className='fr' htmlFor='city'>city</label>
+        <br></br>
+        <input
+        className='fr'
+        type='text'
+        name='city'
+        id='city'
+        placeholder='city'
+        value={formData.city}
+        onChange={changeHandler}
+        />
+        <br></br><br></br>
+
+        <label className='fr' htmlFor='state'>State</label>
+        <br></br>
+        <input
+        className='fr'
+        type='text'
+        name='state'
+        id='state'
+        placeholder='state'
+        value={formData.state}
+        onChange={changeHandler}
+        />
+        <br></br><br></br>
+
+        <label className='fr' htmlFor='streetAddress'>streetAddress</label>
+        <br></br>
+        <input
+        className='fr'
+        type='text'
+        name='streetAddress'
+        id='streetAddress'
+        placeholder='streetAddress'
+        value={formData.streetAddress}
+        onChange={changeHandler}
+        />
+        <br></br><br></br>
 
         
 
