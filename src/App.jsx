@@ -6,7 +6,7 @@ function App() {
 
   const [formData, setFormData] = useState({
     firstName: "", lastName: "", email: "", country: "India", streetAddress: "",
-    city: "", state: "", postalCode: "", comments: false, candidates: false, offers: false, pushNotification:""
+    city: "", state: "", postalCode: "", comments: false, candidates: false, offers: false, pushNotification: ""
   });
 
   function changeHandler(event) {
@@ -14,11 +14,10 @@ function App() {
     setFormData((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
   }
 
-  function submitHandler(event){
-      event.preventDefault();
-      console.log("Printing the value of form data");
-      console.log(formData);
-      
+  function submitHandler(event) {
+    event.preventDefault();
+    console.log("Printing the value of form data");
+    console.log(formData);
   }
 
   return (
@@ -190,6 +189,7 @@ function App() {
         <br></br>
 
         <input
+          className='radio'
           type='radio'
           name='pushNotification'
           id='pushEverything'
@@ -199,6 +199,7 @@ function App() {
         <label htmlFor='pushEverything'>Everything</label><br></br>
 
         <input
+          className='radio'
           type='radio'
           name='pushNotification'
           id='pushEmail'
@@ -208,6 +209,7 @@ function App() {
         <label htmlFor='pushEmail'>Same as email</label><br></br>
 
         <input
+          className='radio'
           type='radio'
           name='pushNotification'
           id='pushNothing'
@@ -216,12 +218,9 @@ function App() {
         />
         <label htmlFor='pushNothing'>don't push Notificatuins</label><br></br><br></br>
 
-
         <button>Save</button>
 
-
       </form>
-
     </div>
   )
 }

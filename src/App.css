@@ -45,3 +45,8 @@ h1{
   display: inline-block;
   vertical-align: middle; /* Ensures the text is aligned with the checkbox */
 }
+
+.radio{
+  height: 20px;
+  width: 30px;
+}
